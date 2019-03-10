@@ -1,4 +1,4 @@
-
+package  com.example.roshambo;
 
 import java.util.Random;
 

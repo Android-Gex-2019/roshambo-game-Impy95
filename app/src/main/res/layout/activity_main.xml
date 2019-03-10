@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_rockButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onRockClick"
+        app:layout_constraintEnd_toStartOf="@+id/image_paperButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rock_button" />
+
+    <ImageView
+        android:id="@+id/image_paperButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onPaperClick"
+        app:layout_constraintBottom_toBottomOf="@+id/image_rockButton"
+        app:layout_constraintEnd_toStartOf="@+id/image_scissorsButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image_rockButton"
+        app:layout_constraintTop_toTopOf="@+id/image_rockButton"
+        app:srcCompat="@drawable/paper_button" />
+
+    <ImageView
+        android:id="@+id/image_scissorsButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onScissorsClick"
+        app:layout_constraintBottom_toBottomOf="@+id/image_paperButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image_paperButton"
+        app:layout_constraintTop_toTopOf="@+id/image_paperButton"
+        app:srcCompat="@drawable/scissor_button" />
+
+    <ImageView
+        android:id="@+id/image_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/player_description"
+        app:layout_constraintBottom_toTopOf="@+id/text_player"
+        app:layout_constraintEnd_toStartOf="@+id/image_computer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/image_computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/computer_description"
+        app:layout_constraintBottom_toBottomOf="@+id/image_player"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image_player"
+        app:layout_constraintTop_toTopOf="@+id/image_player"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/none" />
+
+    <TextView
+        android:id="@+id/text_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_description"
+        app:layout_constraintBottom_toBottomOf="@+id/text_computer"
+        app:layout_constraintEnd_toEndOf="@+id/image_player"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/image_player"
+        app:layout_constraintTop_toTopOf="@+id/text_computer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:text="@string/computer_description"
+        app:layout_constraintBottom_toTopOf="@+id/text_results"
+        app:layout_constraintEnd_toEndOf="@+id/image_computer"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="@+id/image_computer" />
+
+    <TextView
+        android:id="@+id/text_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/rock_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/rock_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/image_rockButton"
+        app:layout_constraintStart_toStartOf="@+id/image_rockButton"
+        app:layout_constraintTop_toBottomOf="@+id/image_rockButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/paper_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/image_paperButton"
+        app:layout_constraintStart_toStartOf="@+id/image_paperButton"
+        app:layout_constraintTop_toBottomOf="@+id/image_paperButton" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/scissors_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/image_scissorsButton"
+        app:layout_constraintStart_toStartOf="@+id/image_scissorsButton"
+        app:layout_constraintTop_toBottomOf="@+id/image_scissorsButton" />
+
+</android.support.constraint.ConstraintLayout>
